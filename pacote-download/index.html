@@ -1,0 +1,75 @@
+<!-- Audio -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Player de Audio </title>
+
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="containerPlayer">
+
+        <div class="containerThumb">
+
+            <img id="thumbnail" src="assets/image/cris-brown.jpg" alt="">
+
+        </div>
+
+        <div id="progressBar">
+            <div id="progresso"> </div>
+        </div>
+
+        <div class="tempo">
+            <p id="inicio">0:00</p>
+            <p id="fim">0:00</p>
+        </div>
+
+        <div id="nomeArtista"> </div>
+
+        <!-- player do projeto -->
+        <audio id="player">
+            <source class="musicas" src="assets/audio/Chris-Brown.mp3" type="audio/mpeg">
+            <source class="musicas" src="assets/audio/Erik Hecht.mp3" type="audio/mpeg">
+            <source class="musicas" src="assets/audio/Justin-Bieber.mp3" type="audio/mpeg">
+            <source class="musicas" src="assets/audio/Yves Larock.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- controles personalizados do player -->
+        <div class="controles">
+            <img class="btnPlayer" onclick="back()" src="./assets/icons-player/back.svg" alt="" width="20px">
+
+            <img class="btnPlayer" onclick="retroceder()" src="./assets/icons-player/retroceder.svg" alt="">
+
+            <img class="btnPlayer" onclick="reproduzir()" src="./assets/icons-player/play-circle.svg" alt="">
+
+            <img class="btnPlayer" onclick="parar()" src="./assets/icons-player/stop.svg" alt="">
+
+            <img class="btnPlayer" onclick="avancar()" src="./assets/icons-player/avancar.svg" alt="">
+
+            <img class="btnPlayer" onclick="next()" src="./assets/icons-player/next.svg" alt="" width="20px">
+
+        </div>
+
+        <div id="Containervolume">
+
+            <p id="pVol">volume:</p>
+            <input type="range" id="volume" min="0" max="100" value="100" onclick="volume()">         
+
+        </div>
+
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+    <footer> Desenvolvido por Paulo Guedes - <a href="https://github.com/pauloguedes96">Github</a> </footer>
+
+</body>
+
+</html>
