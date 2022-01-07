@@ -1,29 +1,125 @@
 body{
     margin:0;
-    background-color: #112211;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.containerPlayer{
-    width: 450px;
-    height: 500px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 15px;
-    background-color: #1ed760;
-    box-shadow: 0px 0px 40px 15px #1ed75f62;
-    padding: 20px;
+.containerSite{
+    height: 100vh;
+    width: 100vw;
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template: 1fr 3fr 1fr 35px / 1fr 0.6fr 1fr;
+    background-color: #1DB954;
 }
 
+@media only screen and (max-width: 730px) {
+
+    .logoSpotify1 img {
+        display: none;
+    }
+    .logoSpotify2 img {
+        display: none;
+    }
+}
+
+.espaco1{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+/*     background-color: rgb(46, 91, 212); */
+}
+
+.logoSpotify1{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    
+/*     background-color: #a02020; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.containerPlayer{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    background-color: #121212;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoSpotify2{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    
+/*     background-color: #a02020; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.espaco2{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+/*     background-color: rgb(93, 3, 116); */
+}
+
+.footer{
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #121212;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+/* --------------------------------------------- */
+
 .containerThumb{
-    width: 350px;
-    height: 320px;
-    margin: auto;
-    margin-top: 15px;
+    width: 70%;
+    height: 50%;
     padding: 10px;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.349);
 }
 
 #thumbnail{
@@ -34,36 +130,32 @@ body{
 #nomeArtista{
     width: 250px;
     height: 20px;
-/*     border: solid 1px black; */
-    margin: auto;
-    margin-top: 6px;
-    text-align: center;
-    font-weight: bold
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 #progressBar{
     width: 80%;
     height: 10px;
-    border: solid 2px black;
-    margin: auto;
-    margin-top: 15px;
+    border: solid 1px white;
     border-radius: 5px;
 }
 
 #progresso{
     height: 100%;
     width: 1%;
-    background-color: black;
+    background-color: white;
     border-radius: 0px 5px 5px 0px;;
 }
 
 .tempo{
-    margin: auto;
-    margin-top: 5px;
     width: 80%;
-/*     height: 10px; */
-/*     border: solid 2px black; */
+    height: 15px;
     overflow:hidden;
+    color: white;
 }
 
 #inicio{
@@ -76,21 +168,15 @@ body{
     margin: 0%;
 }
 
-#player { 
-    margin-top: 15px;
-}
-
 .controles{
-    text-align: center;
-    margin: auto;
-    margin-top: 5px;
     width: 350px;
-/*     border: solid 1px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnPlayer{
     width: 40px;
-    margin-top: 2px;
     cursor:pointer;
 }
 
@@ -98,35 +184,11 @@ body{
     padding: 1px;
 }
 
-
 #Containervolume{
-    width: 45%;
+    width: 60%;
     height: 20px;
-    margin: auto;
-    margin-top: 5px;
-/*     border: solid 1px black; */
-}
-
-#volume{
-    float: right;
-}
-
-#pVol{
-    float: left;
-    margin: 0;
-    font-weight: bold;
-}
-
-footer{
-    background-color: #1ed760;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-}
-
-a{
-    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
